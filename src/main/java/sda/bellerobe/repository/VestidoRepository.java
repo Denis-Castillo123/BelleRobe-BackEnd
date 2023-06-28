@@ -1,5 +1,8 @@
 package sda.bellerobe.repository;
 
-public class VestidoRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import sda.bellerobe.model.VestidoModel;
+
+public interface VestidoRepository extends JpaRepository<VestidoModel,Integer>{
 
 }
