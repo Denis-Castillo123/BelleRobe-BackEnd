@@ -39,6 +39,6 @@ public class UsuarioModel {
 	private String telefono;
 	
 	@Column(name = "id_rol")
-	private Integer id_rol;
+	private CatRolModel id_rol;
 	
 }
