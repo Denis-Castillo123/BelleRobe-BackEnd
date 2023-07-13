@@ -12,14 +12,15 @@ import lombok.Setter;
 @Setter
 @Getter
 @Entity
-@Table (name = "CAT_Rol")
+@Table (name = "cat_rol")
 public class CatRolModel {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_rol")
-	private Integer idDireccion;
+	private Integer idRol;
 	
 	@Column(name = "rol")
-	private String calle;
+	private String rol;
 
 }
