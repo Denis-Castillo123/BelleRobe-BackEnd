@@ -1,5 +1,7 @@
 package sda.bellerobe.model;
 
+import java.math.BigDecimal;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -34,10 +36,10 @@ public class VestidoModel {
 	private String valoracion;
 	
 	@Column(name = "precio")
-	private Number precio;
+	private BigDecimal precio;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_tipo")
-	private CatTipoModel id_tipo;
+	private CatTipoModel idTipo;
 	
 }
