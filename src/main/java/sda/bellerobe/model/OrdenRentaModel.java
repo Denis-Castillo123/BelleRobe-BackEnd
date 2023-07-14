@@ -2,9 +2,12 @@ package sda.bellerobe.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,16 +35,20 @@ public class OrdenRentaModel {
 	@Column(name = "totalOrden")
 	private Double totalOrden;
 	
-	@Column(name = "id_usuario")
-	private Integer id_usuario;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_usuario")
+	private UsuarioModel id_usuario;
 	
-	@Column(name = "id_ciudad")
-	private Integer id_ciudad;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_ciudad")
+	private CatCiudadModel id_ciudad;
 	
-	@Column(name = "id_direccion")
-	private Integer id_direccion;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_direccion")
+	private CatDireccionModel id_direccion;
 	
-	@Column(name = "id_vestido")
-	private Integer id_vestido;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "id_vestido")
+	private VestidoModel id_vestido;
 	
 }
