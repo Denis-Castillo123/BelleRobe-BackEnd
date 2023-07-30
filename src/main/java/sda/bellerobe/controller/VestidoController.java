@@ -18,7 +18,6 @@ import sda.bellerobe.model.Response;
 import sda.bellerobe.model.VestidoFiltroRequest;
 import sda.bellerobe.model.VestidoModel;
 import sda.bellerobe.model.VestidoRequest;
-import sda.bellerobe.service.IUsuarioService;
 import sda.bellerobe.service.IVestidoService;
 
 @CrossOrigin(origins = "*")
@@ -88,5 +87,14 @@ public class VestidoController {
 		return new ResponseEntity<Response<VestidoModel>> (response,HttpStatus.OK);
 		
 	}
+	
+	/*
+	 * @GetMapping(path = "/{category}", produces =
+	 * MediaType.APPLICATION_JSON_VALUE) public
+	 * ResponseEntity<List<ProductResponse>> getProductsByCategory(@PathVariable
+	 * String category){ return new
+	 * ResponseEntity<>(productService.getProductsByCategory(category),
+	 * HttpStatus.OK); }
+	 */
 
 }

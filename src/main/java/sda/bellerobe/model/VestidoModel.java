@@ -11,7 +11,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -37,6 +36,9 @@ public class VestidoModel {
 	
 	@Column(name = "precio")
 	private BigDecimal precio;
+	
+	@Column(name = "imagen")
+	private String imagen;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_tipo")
