@@ -21,6 +21,6 @@ public class VestidoRequest {
 
 	private Integer idTipo;
 	
-	private String imagen;
+	private String imagen; 
 
 }

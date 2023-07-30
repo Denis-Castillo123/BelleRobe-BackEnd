@@ -38,7 +38,7 @@ public class VestidoModel {
 	private BigDecimal precio;
 	
 	@Column(name = "imagen")
-	private String imagen;
+	private String imagen; 
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "id_tipo")
